@@ -137,7 +137,6 @@ function handleOption(option) {
         addBotMessage(`
             <b>Para solicitar un retiro, ingresa o regístrate en <a href="form.html">este enlace</a> y rellena el formulario! 💰.
             <br>
-            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
     } else if(option === "Consultar mi retiro") {
         addBotMessage(`
