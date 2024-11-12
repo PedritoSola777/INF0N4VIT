@@ -10,7 +10,7 @@
 /* Estilos Generales */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'geomanistregular', Arial, sans-serif;
     font-weight: normal;
 }
 
@@ -525,21 +525,10 @@ p {
 /*End Mobile version*/
 
 /* Estilos para centrar imágenes en image-movement */
-.image-movement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 70vh; /* Altura ajustada para un buen espacio de renderización */
-    overflow: hidden;
-    background-color: #f0f0f0; /* Color de fondo opcional */
-    margin-top: 10px; /* Ajustar margen para reducir padding */
-}
-
+/* Estilos generales */
 .image-movement img {
-    position: absolute;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     max-height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -548,6 +537,50 @@ p {
 .image-movement img.active {
     opacity: 1;
 }
+
+/* Estilos específicos para las imágenes de escritorio y móvil */
+.desktop-img {
+    display: block;
+}
+
+.mobile-img {
+    display: none;
+}
+
+/* Mostrar solo las imágenes móviles en pantallas pequeñas */
+@media (max-width: 768px) {
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+    }
+}
+
+/* Botones de navegación */
+.navigation-buttons button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.navigation-buttons button.active {
+    width: 16px;
+    height: 16px;
+    background-color: #ff0000; /* Color del botón activo */
+    transform: scale(1.2); /* Aumenta el tamaño del botón */
+}
+
+.navigation-buttons button:hover {
+    transform: scale(1.2);
+    background-color: #d1d1d1; /* Color al hacer hover */
+}
+
 
 /* Estilos para las cards */
 /* Estilos para las cards */

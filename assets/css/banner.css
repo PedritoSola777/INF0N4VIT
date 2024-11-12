@@ -1,0 +1,54 @@
+/* Contenedor principal del slider */
+.image-movement {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Imágenes dentro del slider */
+.image-movement img {
+    width: 100%;
+    height: auto;
+    display: none; /* Oculta las imágenes inactivas */
+    transition: opacity 0.1s ease-in-out; /* Animación más rápida */
+}
+
+.image-movement img.active {
+    display: block; /* Solo la imagen activa es visible */
+    opacity: 1;
+}
+
+/* Contenedor de los botones de navegación */
+.navigation-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos de los botones de navegación */
+.navigation-buttons button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    transition: all 0.2s ease-in-out; /* Animación rápida para los botones */
+    cursor: pointer;
+}
+
+.navigation-buttons button.active {
+    width: 16px;
+    height: 16px;
+    background-color: #ff0000;
+    transform: scale(1.2);
+}
+
+.navigation-buttons button:hover {
+    transform: scale(1.2);
+    background-color: #d1d1d1;
+}
+
