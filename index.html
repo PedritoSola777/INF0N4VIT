@@ -152,19 +152,22 @@
 
 
 <div class="image-movement">
-    <!-- Contenedor para las imágenes de escritorio -->
+    <!-- Contenedor de imágenes para escritorio -->
     <div class="desktop-images">
         <img src="./assets/img/feriasWeb.png" alt="Credito Infonavit" class="desktop-img active">
         <img src="./assets/img/bannerDesk2.png" alt="" class="desktop-img">
         <img src="./assets/img/bannerDesk3.png" alt="" class="desktop-img">
     </div>
 
-    <!-- Contenedor para las imágenes de móvil
+    <!-- Contenedor de imágenes para móvil -->
     <div class="mobile-images">
         <img src="./assets/img/banner_ferias_mov.png" alt="Credito Infonavit" class="mobile-img active">
         <img src="./assets/img/bannerMov2.png" alt="" class="mobile-img">
         <img src="./assets/img/bannerMov3.png" alt="" class="mobile-img">
-    </div> -->
+    </div>
+
+    <!-- Botón de llamada a la acción (opcional) -->
+    <a href="#" class="cta-button">Descubre más</a>
 
     <!-- Botones de navegación -->
     <div class="navigation-buttons">
@@ -174,35 +177,6 @@
     </div>
 </div>
 
-
-
-<script>
- const images = document.querySelectorAll('.image-movement img');
-const buttons = document.querySelectorAll('.navigation-buttons button');
-let currentIndex = 0;
-
-function updateSlider(index) {
-    images.forEach((img, i) => img.classList.toggle('active', i === index));
-    buttons.forEach((btn, i) => btn.classList.toggle('active', i === index));
-}
-
-buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        currentIndex = index;
-        updateSlider(currentIndex);
-    });
-});
-
-// Cambia de imagen automáticamente cada 1.5 segundos (1500ms)
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateSlider(currentIndex);
-}, 1500);
-
-
-
-
-</script>
 
 <!-- Cards Section -->
     <!-- Cards Section -->
@@ -291,6 +265,7 @@ setInterval(() => {
 
 
 <script src="assets/JS/bot.js"> </script>
+<script src="assets/JS/slide.js"></script>
 
 </body>
 </html>
